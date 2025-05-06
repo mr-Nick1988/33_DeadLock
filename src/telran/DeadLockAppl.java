@@ -35,7 +35,7 @@ public class DeadLockAppl {
             try {
                 System.out.println(botName + ": CAPTURED " + getLockName(second));
             } finally {
-                second.lock();
+                second.unlock();
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
